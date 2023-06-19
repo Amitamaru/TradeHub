@@ -1,2 +1,4 @@
-package com.marzhiievskyi.tradehubproject.controller;public class ListingController {
+package com.marzhiievskyi.tradehubproject.controller;
+
+public class ListingController {
 }

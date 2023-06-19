@@ -1,6 +1,6 @@
 # create database clients
-CREATE DATABASE IF NOT EXISTS `mvc_project_db` DEFAULT CHARACTER SET utf8mb4;
-USE `mvc_project_db`;
+CREATE DATABASE IF NOT EXISTS trade_hub_db DEFAULT CHARACTER SET utf8mb4;
+USE trade_hub_db;
 create table if not exists client
 (
     id              bigint auto_increment

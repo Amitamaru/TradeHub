@@ -1,4 +1,4 @@
-package com.marzhiievskyi.spring_mvc_project.domain;
+package com.marzhiievskyi.tradehubproject.domain;
 
 public enum Permission {
     SELLER,
