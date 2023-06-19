@@ -1,0 +1,23 @@
+# insert data clients
+INSERT INTO trade_hub_db.client (login, password, name, surname, email, permission, updated_date, registered_date)
+VALUES ('megan88', 'p@ssw0rd!', 'Megan', 'Davis', 'megan.davis@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('alexander', 'securepass123', 'Alexander', 'Wilson', 'alexander.wilson@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('sarah21', 'password321', 'Sarah', 'Johnson', 'sarah.johnson@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('robert34', 'pass123word', 'Robert', 'Smith', 'robert.smith@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('karen77', 'mysecretword', 'Karen', 'Brown', 'karen.brown@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('peter93', 'letmein123', 'Peter', 'Jones', 'peter.jones@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('laura55', 'laurapass', 'Laura', 'Miller', 'laura.miller@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('matthew82', 'password456', 'Matthew', 'Taylor', 'matthew.taylor@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('olivia27', 'oliviapass', 'Olivia', 'Anderson', 'olivia.anderson@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('william44', 'willpass123', 'William', 'Moore', 'william.moore@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('jessica12', 'jesspass', 'Jessica', 'Wilson', 'jessica.wilson@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('ryan19', 'ryanpassword', 'Ryan', 'Brown', 'ryan.brown@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('emily89', 'password987', 'Emily', 'Johnson', 'emily.johnson@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('daniel78', 'danielpass', 'Daniel', 'Miller', 'daniel.miller@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('lily23', 'lilypass123', 'Lily', 'Clark', 'lily.clark@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('jackson7', 'passjackson', 'Jackson', 'Taylor', 'jackson.taylor@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('emma94', 'emmaword', 'Emma', 'Harris', 'emma.harris@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('ethan61', 'ethanpass', 'Ethan', 'Wilson', 'ethan.wilson@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('mia36', 'miapassword', 'Mia', 'Anderson', 'mia.anderson@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('jacob51', 'jacobpass123', 'Jacob', 'Jones', 'jacob.jones@example.com', 'BUYER', DEFAULT, DEFAULT),
+       ('sophia47', 'sophiapass', 'Sophia', 'Davis', 'sophia.davis@example.com', 'BUYER', DEFAULT, DEFAULT);
