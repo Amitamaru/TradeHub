@@ -8,6 +8,6 @@ import java.time.LocalDateTime;
 /**
  * DTO for {@link com.marzhiievskyi.tradehubproject.domain.Listing}
  */
-public record ListingDto(String title, String description, Double price, Currency currency, ClientDto client,
-                         LocalDateTime updated, LocalDateTime created) implements Serializable {
+public record showInfoListingDTO(String title, String description, Double price, Currency currency, showClientInfoDTO client,
+                                 LocalDateTime updated, LocalDateTime created) implements Serializable {
 }

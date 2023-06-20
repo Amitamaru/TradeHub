@@ -1,16 +1,16 @@
 package com.marzhiievskyi.tradehubproject.mappers;
 
 import com.marzhiievskyi.tradehubproject.domain.Listing;
-import com.marzhiievskyi.tradehubproject.dto.ListingDto;
+import com.marzhiievskyi.tradehubproject.dto.showInfoListingDTO;
 import org.mapstruct.*;
 
 @Mapper(componentModel = "spring", uses = {ClientMapper.class})
 public interface ListingMapper {
 
-    Listing toEntity(ListingDto listingDto);
+    Listing toEntity(showInfoListingDTO showInfoListingDTO);
 
-    ListingDto toDto(Listing listing);
+    showInfoListingDTO toDto(Listing listing);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Listing partialUpdate(ListingDto listingDto, @MappingTarget Listing listing);
+    Listing partialUpdate(showInfoListingDTO showInfoListingDTO, @MappingTarget Listing listing);
 }
