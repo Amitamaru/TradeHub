@@ -3,9 +3,9 @@ package com.marzhiievskyi.tradehubproject.service;
 
 import com.marzhiievskyi.tradehubproject.dao.ClientDAO;
 import com.marzhiievskyi.tradehubproject.domain.Client;
-import com.marzhiievskyi.tradehubproject.domain.Permission;
+import com.marzhiievskyi.tradehubproject.domain.constants.Permission;
 
-import com.marzhiievskyi.tradehubproject.dto.showClientInfoDTO;
+import com.marzhiievskyi.tradehubproject.domain.dto.ShowInfoClientDTO;
 import com.marzhiievskyi.tradehubproject.mappers.ClientMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -21,7 +21,7 @@ public class ClientService {
 
 
 
-    public List<showClientInfoDTO> findAllClients() {
+    public List<ShowInfoClientDTO> findAllClients() {
 
         List<Client> clientList = clientDAO.findAll();
         return clientList.stream().map(clientMapper::toDto).toList();
@@ -31,7 +31,7 @@ public class ClientService {
         clientDAO.save(client);
     }
 
-    public showClientInfoDTO findClientById(Long id) {
+    public ShowInfoClientDTO findClientById(Long id) {
         Client client = clientDAO.findById(id).orElseThrow();
         return clientMapper.toDto(client);
     }

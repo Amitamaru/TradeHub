@@ -2,7 +2,7 @@ package com.marzhiievskyi.tradehubproject.service;
 
 import com.marzhiievskyi.tradehubproject.dao.ListingDAO;
 import com.marzhiievskyi.tradehubproject.domain.Listing;
-import com.marzhiievskyi.tradehubproject.dto.showInfoListingDTO;
+import com.marzhiievskyi.tradehubproject.domain.dto.ShowInfoListingDTO;
 import com.marzhiievskyi.tradehubproject.mappers.ListingMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,13 +16,20 @@ public class ListingService {
     private final ListingDAO listingDAO;
     private final ListingMapper listingMapper;
 
-    public List<showInfoListingDTO> getAllListings() {
+    public List<ShowInfoListingDTO> getAllListings() {
         List<Listing> listings = listingDAO.findAll();
         return listings.stream().map(listingMapper::toDto).toList();
     }
 
-    public List<showInfoListingDTO> getListingsByClientId(Long id) {
+    public List<ShowInfoListingDTO> getListingsByClientId(Long id) {
         List<Listing> listingsByClientId = listingDAO.getListingsByClientId(id);
+        //TODO catch if client id is not exist in db
         return listingsByClientId.stream().map(listingMapper::toDto).toList();
+
+    }
+
+    public ShowInfoListingDTO findListingById(Long id) {
+        Listing listing = listingDAO.findById(id).orElseThrow();
+        return listingMapper.toDto(listing);
     }
 }

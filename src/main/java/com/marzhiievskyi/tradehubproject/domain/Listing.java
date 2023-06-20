@@ -1,9 +1,7 @@
 package com.marzhiievskyi.tradehubproject.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.marzhiievskyi.tradehubproject.domain.constants.Currency;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Size;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -21,7 +19,6 @@ public class Listing {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
 
     private String title;
 

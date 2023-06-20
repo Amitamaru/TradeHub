@@ -1,4 +1,4 @@
-package com.marzhiievskyi.tradehubproject.domain;
+package com.marzhiievskyi.tradehubproject.domain.constants;
 
 public enum Permission {
     SELLER,

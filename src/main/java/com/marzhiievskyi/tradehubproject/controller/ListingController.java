@@ -1,6 +1,6 @@
 package com.marzhiievskyi.tradehubproject.controller;
 
-import com.marzhiievskyi.tradehubproject.dto.showInfoListingDTO;
+import com.marzhiievskyi.tradehubproject.domain.dto.ShowInfoListingDTO;
 import com.marzhiievskyi.tradehubproject.service.ListingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,12 +18,17 @@ public class ListingController {
     private final ListingService listingService;
 
     @GetMapping("/listings")
-    public List<showInfoListingDTO> findAllListings() {
+    public List<ShowInfoListingDTO> findAllListings() {
         return listingService.getAllListings();
     }
 
-    @GetMapping("/listings/{id}")
-    public List<showInfoListingDTO> findListingByClientId(@PathVariable Long id) {
+    @GetMapping("/listings/client{id}")
+    public List<ShowInfoListingDTO> findListingByClientId(@PathVariable Long id) {
         return listingService.getListingsByClientId(id);
+    }
+
+    @GetMapping("/listings/{id}")
+    public ShowInfoListingDTO findListingById(@PathVariable Long id) {
+        return listingService.findListingById(id);
     }
 }
